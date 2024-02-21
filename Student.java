@@ -5,7 +5,7 @@ public class Student extends Acceptor {
     private String dept;
 
     // constructor to take student and department name
-    public Student(String name, String dept){
+    public Student(String name, String dept) {
         this.name = name;
         this.dept = dept;
     }
@@ -14,10 +14,18 @@ public class Student extends Acceptor {
     void accept(Visitor visitor) {
         visitor.visit(this);
     }
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
     // overriding the toString() method
     @Override
-    public String toString(){
+    public String toString() {
         return name + ", student of " + dept + " department.";
     }
 }
